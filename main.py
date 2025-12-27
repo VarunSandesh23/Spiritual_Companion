@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 
 # Load credentials
 load_dotenv()
-AGENT_ID = os.getenv("AGENT_ID")
+AGENT_ID = st.secrets.get("AGENT_ID") or os.getenv("AGENT_ID")
 
 # --- UI STYLING ---
 st.set_page_config(page_title="Krishna: Spiritual Companion", page_icon="🪔")
